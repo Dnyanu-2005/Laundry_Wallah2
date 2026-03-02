@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LaundryPro - Smart Laundry Service</title>
+
+<style>
+
+/* ===== GLOBAL ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+    color:white;
+}
+
+/* ===== NAVBAR ===== */
+nav{
+    height:10vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 5%;
+    background:rgba(0,0,0,0.2);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-size:1.6rem;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:yellow;
+}
+
+.user{
+    font-weight:bold;
+}
+
+/* ===== HERO ===== */
+.hero{
+    height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 8%;
+}
+
+/* LEFT */
+.hero-left{
+    width:55%;
+}
+
+.hero-left h1{
+    font-size:2.8rem;
+    margin-bottom:15px;
+}
+
+.hero-left span{
+    color:yellow;
+}
+
+.hero-left p{
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+/* Stats */
+.stats{
+    display:flex;
+    gap:30px;
+    margin:20px 0;
+}
+
+.stat-box{
+    text-align:center;
+}
+
+.stat-box h2{
+    font-size:1.5rem;
+}
+
+/* Features */
+.features{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+    margin-top:15px;
+}
+
+.features div{
+    font-size:0.9rem;
+}
+
+/* Button */
+.hero-left button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#007bff;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero-left button:hover{
+    background:yellow;
+    transform:scale(1.05);
+}
+
+/* RIGHT */
+.hero-right{
+    width:40%;
+}
+
+.hero-right img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+
+    body{
+        overflow:auto;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding:40px 5%;
+        height:auto;
+    }
+
+    .hero-left, .hero-right{
+        width:100%;
+    }
+
+    .stats{
+        justify-content:center;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:10px;
+        height:auto;
+        padding:15px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">LaundryPro</div>
+
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+    </div>
+
+    <div class="user">Hello, Dnyanesh</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+    <!-- LEFT -->
+    <div class="hero-left">
+        <h1>Smart <span>Laundry Solutions</span><br> For Modern Living</h1>
+        
+        <p>
+            We provide premium washing, ironing and dry-cleaning services
+            with doorstep pickup and delivery. Our advanced technology
+            ensures hygienic cleaning and fabric protection.
+        </p>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat-box">
+                <h2>5000+</h2>
+                <p>Happy Customers</p>
+            </div>
+            <div class="stat-box">
+                <h2>12000+</h2>
+                <p>Orders Completed</p>
+            </div>
+            <div class="stat-box">
+                <h2>5+ Years</h2>
+                <p>Experience</p>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="features">
+            <div>✔ Free Pickup & Delivery</div>
+            <div>✔ 24-Hour Express Service</div>
+            <div>✔ Affordable Pricing</div>
+            <div>✔ Fabric Safe Technology</div>
+        </div>
+
+        <button>Book a Service Today</button>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="hero-right">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm8aGbyNiIJztbavxqpC43Qf34dX2inn9Xgg&s" alt="Laundry Service">
+    </div>
+
+</section>
+
+</body>
+</html>
